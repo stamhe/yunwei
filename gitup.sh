@@ -21,12 +21,12 @@ do
 	filepath=`dirname ${filename_path}`
 
 	if [ -d $filename_path2 ] ; then
-        /bin/cp -fr $filename_path2 $filepath
+        /bin/cp -fr $filename_path2 /data0/htdocs/$filepath
 	else
 		if [ -d ${filepath} ] ; then
-            /bin/cp -f $filename_path2 $filename_path
+            /bin/cp -f $filename_path2 /data0/htdocs/$filename_path
 		else
-            /bin/cp -rf `dirname $filename_path2` $filepath
+            /bin/cp -rf `dirname $filename_path2` /data0/htdocs/$filepath
 		fi
 	fi
 
